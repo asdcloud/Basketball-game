@@ -18,8 +18,7 @@ public class playercontrol : MonoBehaviour
             this.gameObject.transform.position += new Vector3(-0.1f, 0, 0);
         }else if (Input.GetKey(KeyCode.UpArrow)) {
             this.gameObject.transform.position += new Vector3(0, 0.1f, 0);
-        }
-        else if (Input.GetKey(KeyCode.DownArrow)) {
+        }else if (Input.GetKey(KeyCode.DownArrow)) {
             this.gameObject.transform.position += new Vector3(0, -0.1f, 0);
         }
     }
