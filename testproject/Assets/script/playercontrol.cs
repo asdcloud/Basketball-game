@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playercontrol : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 0.1f;
     void Start() {
         print("Start");
     }
@@ -13,13 +13,13 @@ public class playercontrol : MonoBehaviour
     void Update() {
         print("Update");
         if(Input.GetKey(KeyCode.RightArrow)) {
-            this.gameObject.transform.position += new Vector3(0.1f, 0, 0);
+            this.gameObject.transform.position += new Vector3(speed, 0, 0);
         }else if (Input.GetKey(KeyCode.LeftArrow)) {
-            this.gameObject.transform.position += new Vector3(-0.1f, 0, 0);
+            this.gameObject.transform.position += new Vector3(-speed, 0, 0);
         }else if (Input.GetKey(KeyCode.UpArrow)) {
-            this.gameObject.transform.position += new Vector3(0, 0.1f, 0);
+            this.gameObject.transform.position += new Vector3(0, speed, 0);
         }else if (Input.GetKey(KeyCode.DownArrow)) {
-            this.gameObject.transform.position += new Vector3(0, -0.1f, 0);
+            this.gameObject.transform.position += new Vector3(0, -speed, 0);
         }
     }
 }
