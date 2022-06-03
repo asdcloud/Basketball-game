@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1280
     height: 637.3334
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -335,9 +335,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 64510000
-      m_LastClickedID: 20836
-      m_ExpandedIDs: 2efbffff64510000
+      m_SelectedIDs: 4c510000
+      m_LastClickedID: 20812
+      m_ExpandedIDs: 2efbffff6451000078510000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -608,9 +608,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.2300671, y: 28.573967, z: 0}
+    m_Target: {x: -0.08319855, y: 28.573967, z: 0}
     speed: 2
-    m_Value: {x: 0.2300671, y: 28.573967, z: 0}
+    m_Value: {x: -0.08319855, y: 28.573967, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -661,9 +661,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.4272493
+    m_Target: 1.1859304
     speed: 2
-    m_Value: 1.4272493
+    m_Value: 1.1859304
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -951,11 +951,11 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 160
+    m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 500.66663
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
