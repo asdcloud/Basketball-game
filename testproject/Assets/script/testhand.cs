@@ -25,6 +25,7 @@ public class testhand : MonoBehaviour {
         moveInput = Input.GetAxisRaw("P2_Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
+
     void Update() {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 

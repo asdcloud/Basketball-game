@@ -7,9 +7,10 @@ public class handcontrol : MonoBehaviour
 {
     [SerializeField] public float handSpeed = 0.2f;
     private float handInput;
+    public CollisionDetectionMode collisionDetectionMode;
 
 
-    void FixedUpdate()
+    void Update()
     {
         handInput = Input.GetAxisRaw("Hand"); 
         //按鈕是否被按下s
