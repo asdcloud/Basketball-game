@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ce171a3e8f32e4796f5168a57b8ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handSpeed: 1.5
+  handSpeed: 2
   collisionDetectionMode: 2
 --- !u!1 &1063673185
 GameObject:
