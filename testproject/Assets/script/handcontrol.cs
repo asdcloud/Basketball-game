@@ -9,6 +9,11 @@ public class handcontrol : MonoBehaviour
     private float handInput;
     public CollisionDetectionMode collisionDetectionMode;
 
+    public Rigidbody2D rigidBody2D;
+
+    void start() {
+        rigidBody2D = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -16,9 +21,11 @@ public class handcontrol : MonoBehaviour
         //按鈕是否被按下s
         if(handInput == 1)
         {
-            transform.Rotate(new Vector3(0, 0, handSpeed));
+            rigidBody2D.rotation += handSpeed;
+            //transform.Rotate(new Vector3(0, 0, handSpeed));
         }else if (handInput == -1) {
-            transform.Rotate(new Vector3(0, 0, handSpeed * handInput));
+            rigidBody2D.rotation += handSpeed * handInput;
+            //transform.Rotate(new Vector3(0, 0, handSpeed * handInput));
         }
     }
 }

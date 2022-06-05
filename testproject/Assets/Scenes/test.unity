@@ -765,6 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handSpeed: 1.5
   collisionDetectionMode: 2
+  rigidBody2D: {fileID: 1009847276}
 --- !u!1 &1063673185
 GameObject:
   m_ObjectHideFlags: 0
