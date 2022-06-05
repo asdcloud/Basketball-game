@@ -10,9 +10,16 @@ public class handcontrol : MonoBehaviour
     public CollisionDetectionMode collisionDetectionMode;
 
     public Rigidbody2D rigidBody2D;
+    public void AddTorqueImpulse(float angularChangeInDegrees)
+    {
+        var body = GetComponent<Rigidbody2D>();
+        var impulse = (angularChangeInDegrees * Mathf.Deg2Rad) * body.inertia;
+
+        body.AddTorque(impulse, ForceMode2D.Impulse);
+    }
 
     void start() {
-        rigidBody2D = GetComponent<Rigidbody2D>();
+        rigidBody2D = GetComponent<Rigidbody2D>(); 
     }
 
     void Update()
@@ -21,10 +28,12 @@ public class handcontrol : MonoBehaviour
         //按鈕是否被按下s
         if(handInput == 1)
         {
-            rigidBody2D.rotation += handSpeed;
+            AddTorqueImpulse(handSpeed);
+            //rigidBody2D.rotation += handSpeed;
             //transform.Rotate(new Vector3(0, 0, handSpeed));
         }else if (handInput == -1) {
-            rigidBody2D.rotation += handSpeed * handInput;
+            AddTorqueImpulse(handSpeed * handInput);
+            //rigidBody2D.rotation += handSpeed * handInput;
             //transform.Rotate(new Vector3(0, 0, handSpeed * handInput));
         }
     }
