@@ -524,10 +524,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.3
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 37c135aac69171a40bad30629bd68052, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -609,7 +609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610946414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.18, y: 29.1, z: 0}
+  m_LocalPosition: {x: -4.18, y: 38.39, z: 0}
   m_LocalScale: {x: 3.2474914, y: 3.4639904, z: 3.4639904}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -744,7 +744,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 10
   m_LinearDrag: 0
-  m_AngularDrag: 0.3
+  m_AngularDrag: 0.7
   m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ce171a3e8f32e4796f5168a57b8ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handSpeed: 10
+  handSpeed: 800
   collisionDetectionMode: 2
   rigidBody2D: {fileID: 1009847276}
 --- !u!1 &1063673185
