@@ -7,22 +7,10 @@ using TMPro;
 
 public class BallScore : MonoBehaviour
 {
-  
-
-
-    void Start()
-    {
-        
-      
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
+    public Transform player1Pos;
+    public Transform player2Pos;
+    public Transform basketballPos;
+    public Rigidbody2D basketballRigidbody;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -34,12 +22,17 @@ public class BallScore : MonoBehaviour
         {
             Debug.Log("1");
             Scorecode.Score1 = Scorecode.Score1 + 1;
+            basketballPos.position = new Vector2(-6, 36);
+            player1Pos.position = new Vector2(3, 25);
+            basketballRigidbody.velocity = new Vector2(0, 5);
         }
         else if (other.tag == "scorearea2" && dir.y >= 1)
         {
             Scorecode.Score2 = Scorecode.Score2 + 1;
             Debug.Log("2");
-                
+            basketballPos.position = new Vector2(3, 36);   
+            player2Pos.position = new Vector2(-6, 25);
+            basketballRigidbody.velocity = new Vector2(0, 5);
         }
         
         if (Scorecode.Score1 >= 3)
