@@ -41,5 +41,14 @@ public class BallScore : MonoBehaviour
             Debug.Log("2");
                 
         }
+        
+        if (Scorecode.Score1 >= 3)
+        {
+            FindObjectOfType<Game_Manager>().Endgame();
+        }
+        if (Scorecode.Score2 >= 3)
+        {
+            FindObjectOfType<Game_Manager>().Endgame2();
+        }
     }
 }
