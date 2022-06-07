@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 335547219}
   - component: {fileID: 335547221}
   m_Layer: 5
-  m_Name: scoreP2
+  m_Name: scoreP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,7 +368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 234, y: 303}
+  m_AnchoredPosition: {x: 238, y: 304}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335547219
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 9
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7229385d1de57d24db191fa58f21a399, type: 2}
   m_sharedMaterial: {fileID: -2014238506530649134, guid: 7229385d1de57d24db191fa58f21a399, type: 2}
@@ -480,8 +480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3632a00246cb68745a5cb6a7d586f0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowScore1: {fileID: 396861686}
-  ShowScore2: {fileID: 335547219}
+  ShowScore1: {fileID: 335547219}
+  ShowScore2: {fileID: 396861686}
 --- !u!1 &367969820
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 396861687}
   - component: {fileID: 396861686}
   m_Layer: 5
-  m_Name: score P1
+  m_Name: scoreP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -628,7 +628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: 303}
+  m_AnchoredPosition: {x: -36, y: 304}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396861686

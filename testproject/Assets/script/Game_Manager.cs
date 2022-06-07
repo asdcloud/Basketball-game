@@ -10,7 +10,7 @@ public class Game_Manager : MonoBehaviour
         
             
         Debug.Log("end");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
 
     }
 
@@ -19,7 +19,7 @@ public class Game_Manager : MonoBehaviour
 
 
         Debug.Log("end");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 }
