@@ -2225,6 +2225,8 @@ MonoBehaviour:
   player2Pos: {fileID: 556726983}
   basketballPos: {fileID: 1550644666}
   basketballRigidbody: {fileID: 1550644667}
+  player1Rigidbody: {fileID: 866400909}
+  player2Rigidbody: {fileID: 556726980}
 --- !u!1 &1565192872
 GameObject:
   m_ObjectHideFlags: 0
