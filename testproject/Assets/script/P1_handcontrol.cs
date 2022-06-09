@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class handcontrol : MonoBehaviour
+public class P1_handcontrol : MonoBehaviour
 {
     [SerializeField] public float handSpeed = 0.2f;
     private float handInput;
@@ -24,7 +24,7 @@ public class handcontrol : MonoBehaviour
 
     void Update()
     {
-        handInput = Input.GetAxisRaw("Hand"); 
+        handInput = Input.GetAxisRaw("P1_Hand"); 
         //按鈕是否被按下s
         if(handInput == 1 && Trigger == 0)
         {
