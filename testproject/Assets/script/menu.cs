@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour{
-
+    
     [SerializeField] GameObject PauseMenu;
     
+   
     public void Playgame()
     {
         SceneManager.LoadScene(1);
@@ -16,15 +17,25 @@ public class menu : MonoBehaviour{
         Debug.Log("Quit!");
         Application.Quit();
     }
+   
     public void Pause()
     {
-        Debug.Log("Pause!");
-        Time.timeScale = 0f;
-        PauseMenu.SetActive(true);
+        if(setting.i == 0){
+            Debug.Log("Pause!");
+            Time.timeScale = 0f;
+            PauseMenu.SetActive(true);
+            setting.i = 1;
+        }
+        
     }
     public void Resume()
     {
-        Time.timeScale = 1f;
-        PauseMenu.SetActive(false);
+        if (setting.i == 1)
+        {
+            Time.timeScale = 1f;
+            PauseMenu.SetActive(false);
+            setting.i = 0;
+        }
+        
     }
 }
