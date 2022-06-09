@@ -7,12 +7,14 @@ using TMPro;
 
 public class BallScore : MonoBehaviour
 {
-    public Transform player1Pos;
-    public Transform player2Pos;
-    public Transform basketballPos;
-    public Rigidbody2D basketballRigidbody;
-    public Rigidbody2D player1Rigidbody;
-    public Rigidbody2D player2Rigidbody;
+    [SerializeField] Transform player1Pos;
+    [SerializeField] Transform player2Pos;
+    [SerializeField] Transform basketballPos;
+    [SerializeField] Rigidbody2D basketballRigidbody;
+    [SerializeField] Rigidbody2D player1Rigidbody;
+    [SerializeField] Rigidbody2D player2Rigidbody;
+    [SerializeField] GameObject P1ScoreText;
+    [SerializeField] GameObject P2ScoreText;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,10 +24,12 @@ public class BallScore : MonoBehaviour
         Vector2 dir = (transPos - closePos).normalized;
         if (other.tag == "scorearea1" && dir.y >= 1)
         {
+           P1ScoreText.SetActive(true);
            StartCoroutine(P1Score());
         }
         else if (other.tag == "scorearea2" && dir.y >= 1)
         {
+            P2ScoreText.SetActive(true);
             StartCoroutine(P2Score());
         }
         
@@ -46,7 +50,8 @@ public class BallScore : MonoBehaviour
         basketballPos.position = new Vector2(-6, 36);
         player1Pos.position = new Vector2(3, 27);
         basketballRigidbody.velocity = new Vector2(0, 5);
-        player1Rigidbody.velocity = new Vector2(0, 5);    
+        player1Rigidbody.velocity = new Vector2(0, 5);  
+        P1ScoreText.SetActive(false);
     }
 
      IEnumerator P2Score()
@@ -57,5 +62,6 @@ public class BallScore : MonoBehaviour
         player2Pos.position = new Vector2(-6, 27);
         basketballRigidbody.velocity = new Vector2(0, 5);
         player2Rigidbody.velocity = new Vector2(0, 5);   
+        P1ScoreText.SetActive(false);
     }
 }
