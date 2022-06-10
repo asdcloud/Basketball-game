@@ -12,6 +12,12 @@ public class menu : MonoBehaviour{
     {
         SceneManager.LoadScene(1);
     }
+    public void returnmenu()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+        setting.i = 0;
+    }
     public void Quitgame()
     {
         Debug.Log("Quit!");
@@ -26,7 +32,13 @@ public class menu : MonoBehaviour{
             PauseMenu.SetActive(true);
             setting.i = 1;
         }
-        
+        else if (setting.i == 1)
+        {
+            Time.timeScale = 1f;
+            PauseMenu.SetActive(false);
+            setting.i = 0;
+        }
+
     }
     public void Resume()
     {
