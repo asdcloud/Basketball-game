@@ -62,6 +62,6 @@ public class BallScore : MonoBehaviour
         player2Pos.position = new Vector2(-6, 27);
         basketballRigidbody.velocity = new Vector2(0, 5);
         player2Rigidbody.velocity = new Vector2(0, 5);   
-        P1ScoreText.SetActive(false);
+        P2ScoreText.SetActive(false);
     }
 }
