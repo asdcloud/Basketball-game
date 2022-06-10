@@ -31,16 +31,7 @@ public class BallScore : MonoBehaviour
         {
             P2ScoreText.SetActive(true);
             StartCoroutine(P2Score());
-        }
-        
-        if (Scorecode.Score1 >= 3)
-        {
-            FindObjectOfType<Game_Manager>().Endgame();
-        }
-        if (Scorecode.Score2 >= 3)
-        {
-            FindObjectOfType<Game_Manager>().Endgame2();
-        }
+        }     
     }
 
     IEnumerator P1Score()
@@ -49,19 +40,31 @@ public class BallScore : MonoBehaviour
         Scorecode.Score1 = Scorecode.Score1 + 1;
         basketballPos.position = new Vector2(-6, 36);
         player1Pos.position = new Vector2(3, 27);
+        player2Pos.position = new Vector2(-6, 27);
         basketballRigidbody.velocity = new Vector2(0, 5);
         player1Rigidbody.velocity = new Vector2(0, 5);  
+        player2Rigidbody.velocity = new Vector2(0, 5);   
         P1ScoreText.SetActive(false);
+        if (Scorecode.Score1 >= 3)
+        {
+            FindObjectOfType<Game_Manager>().Endgame();
+        }
     }
 
      IEnumerator P2Score()
     {
         yield return new WaitForSeconds(1);
         Scorecode.Score2 = Scorecode.Score2 + 1;
-        basketballPos.position = new Vector2(3, 36);   
+        basketballPos.position = new Vector2(3, 36);  
+        player1Pos.position = new Vector2(3, 27);
         player2Pos.position = new Vector2(-6, 27);
         basketballRigidbody.velocity = new Vector2(0, 5);
+        player1Rigidbody.velocity = new Vector2(0, 5);  
         player2Rigidbody.velocity = new Vector2(0, 5);   
         P2ScoreText.SetActive(false);
+        if (Scorecode.Score2 >= 3)
+        {
+            FindObjectOfType<Game_Manager>().Endgame2();
+        }
     }
 }
