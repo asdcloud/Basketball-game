@@ -6,6 +6,7 @@ public class setting : MonoBehaviour
 {
     [SerializeField] GameObject PauseMenu;
     public static int i = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,7 @@ public class setting : MonoBehaviour
         }
         
         
-            
     }
+
+    
 }

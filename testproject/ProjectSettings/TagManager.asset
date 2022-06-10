@@ -6,6 +6,7 @@ TagManager:
   tags:
   - scorearea1
   - scorearea2
+  - BackgroundMusic
   layers:
   - Default
   - TransparentFX
