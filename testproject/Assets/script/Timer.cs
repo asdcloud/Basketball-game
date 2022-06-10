@@ -47,6 +47,14 @@ public class Timer : MonoBehaviour
             m_timer.text = string.Format("{0}:{1}", m_min.ToString("00"), m_sec.ToString("00"));
         }
 
+        if(Scorecode.Score1 > Scorecode.Score2)
+        {
+            FindObjectOfType<Game_Manager>().Endgame();
+        }
+        else if(Scorecode.Score2 > Scorecode.Score1)
+        {
+            FindObjectOfType<Game_Manager>().Endgame2();
+        }
         yield return new WaitForSeconds(1);   
         Time.timeScale = 0;                   
     }
