@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     public static int m_min = 1;              
     public int m_sec;              
     public TextMeshProUGUI m_timer;
+    private int m_min_ingame;
     
     // Start is called before the first frame update
     void Start()
@@ -25,8 +26,9 @@ public class Timer : MonoBehaviour
 
     IEnumerator Countdown()
     {
-        m_timer.text = string.Format("{0}:{1}", m_min.ToString("00"), m_sec.ToString("00"));
-        m_seconds = (m_min * 60) + m_sec;       
+        m_min_ingame = m_min;
+        m_timer.text = string.Format("{0}:{1}", m_min_ingame.ToString("00"), m_sec.ToString("00"));
+        m_seconds = (m_min_ingame * 60) + m_sec;       
 
         while (m_seconds > 0)                   
         {
@@ -35,16 +37,16 @@ public class Timer : MonoBehaviour
             m_seconds--;                        
             m_sec--;                           
 
-            if (m_sec < 0 && m_min > 0)       
+            if (m_sec < 0 && m_min_ingame > 0)       
             {
-                m_min -= 1;                    
+                m_min_ingame -= 1;                    
                 m_sec = 59;                     
             }
-            else if (m_sec < 0 && m_min == 0)   
+            else if (m_sec < 0 && m_min_ingame == 0)   
             {
                 m_sec = 0;                      
             }
-            m_timer.text = string.Format("{0}:{1}", m_min.ToString("00"), m_sec.ToString("00"));
+            m_timer.text = string.Format("{0}:{1}", m_min_ingame.ToString("00"), m_sec.ToString("00"));
         }
 
         if(Scorecode.Score1 > Scorecode.Score2)
