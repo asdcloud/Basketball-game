@@ -1723,8 +1723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 615031357}
-  ScoreSettingText: {fileID: 0}
-  TimeSettingText: {fileID: 0}
 --- !u!114 &459047342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3170,8 +3168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 0}
-  ScoreSettingText: {fileID: 0}
-  TimeSettingText: {fileID: 0}
 --- !u!1 &1152586576
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,6 +4360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_seconds: 0
+  m_min: 1
   m_sec: 0
   m_timer: {fileID: 1870836320}
 --- !u!1 &1833622156

@@ -7,7 +7,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public int m_seconds;                 
-    public static int m_min = 1;              
+    public int m_min;              
     public int m_sec;              
     public TextMeshProUGUI m_timer;
     
@@ -54,10 +54,6 @@ public class Timer : MonoBehaviour
         else if(Scorecode.Score2 > Scorecode.Score1)
         {
             FindObjectOfType<Game_Manager>().Endgame2();
-        }
-        else if(Scorecode.Score2 == Scorecode.Score1)
-        {
-            FindObjectOfType<Game_Manager>().Draw();
         }
         yield return new WaitForSeconds(1);   
         Time.timeScale = 0;                   
