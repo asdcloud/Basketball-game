@@ -7,6 +7,7 @@ using TMPro;
 
 public class BallScore : MonoBehaviour
 {
+    public static int ScoreToWin = 3;
     [SerializeField] Transform player1Pos;
     [SerializeField] Transform player2Pos;
     [SerializeField] Transform basketballPos;
@@ -45,7 +46,7 @@ public class BallScore : MonoBehaviour
         player1Rigidbody.velocity = new Vector2(0, 5);  
         player2Rigidbody.velocity = new Vector2(0, 5);   
         P1ScoreText.SetActive(false);
-        if (Scorecode.Score1 >= 3)
+        if (Scorecode.Score1 >= ScoreToWin)
         {
             FindObjectOfType<Game_Manager>().Endgame();
         }
@@ -62,7 +63,7 @@ public class BallScore : MonoBehaviour
         player1Rigidbody.velocity = new Vector2(0, 5);  
         player2Rigidbody.velocity = new Vector2(0, 5);   
         P2ScoreText.SetActive(false);
-        if (Scorecode.Score2 >= 3)
+        if (Scorecode.Score2 >= ScoreToWin)
         {
             FindObjectOfType<Game_Manager>().Endgame2();
         }
