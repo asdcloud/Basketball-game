@@ -25,17 +25,12 @@ public class P1_handcontrol : MonoBehaviour
     void Update()
     {
         handInput = Input.GetAxisRaw("P1_Hand"); 
-        //按鈕是否被按下s
         if(handInput == 1 && Trigger == 0)
         {
             AddTorqueImpulse(handSpeed);
-            //rigidBody2D.rotation += handSpeed;
-            //transform.Rotate(new Vector3(0, 0, handSpeed));
             Trigger = 1;
         }else if (handInput == -1 && Trigger == 0) {
             AddTorqueImpulse(handSpeed * handInput);
-            //rigidBody2D.rotation += handSpeed * handInput;
-            //transform.Rotate(new Vector3(0, 0, handSpeed * handInput));
             Trigger = 1;
         }else if (handInput == 0) {
             Trigger = 0;
